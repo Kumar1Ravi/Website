@@ -32,11 +32,16 @@
             max-width: 300px;
         }
         .address h2, h3, h2, h3 {
+      
             margin-top: 0;
             color: #4f2ca1;
         }
         .address p {
+          
             margin: 1% 0;
+        }
+        .address h2{
+          text-align: center;
         }
         .contact-info {
             display: flex;
@@ -60,7 +65,7 @@
             margin: 1% 0;
         }
         .decleration {
-            text-align: left;
+            text-align: right;
             margin: 20px;
         }
         .Work-experience h1 {
@@ -69,6 +74,46 @@
           color:#4f2ca1;
         }
 
+        .linkedin-icon {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .linkedin-icon a {
+            text-decoration: none;
+            color: #0e76a8; /* LinkedIn's color */
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+        .linkedin-icon img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px; /* Space between the icon and the text */
+        }
+
+        .profile-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-picture img {
+    width: 120px; /* Adjust size as needed */
+    height: 120px; /* Adjust size as needed */
+    border-radius: 50%; /* Make the picture circular */
+    object-fit: cover; /* Ensure the image covers the container */
+}
 
 
     </style>
@@ -85,29 +130,27 @@
 </head>
 <body>
     <div class="container">
-        <div class="flex-container">
-            <div class="address">
-                <h2>Kumar Ravi</h2>
-                <p>2C1, Kamarajar Cross Street</p>
-                <p>Shenbakkam,</p>
-                <p>Vellore - 632008</p>
-            </div>
-            <div class="contact-info">
-                <p><strong>Email:</strong> roshanrajan1073@gmail.com</p>
-                <p><strong>Phone:</strong> +91 7010252993</p>
-            </div>
-        </div>
-
         <div class="Work-experience">
+          
           <h1>Resume</h1>
 
           <h2>Kumar Ravi</h2>
+          <div class="linkedin-icon">
+            <a href="https://www.linkedin.com/in/kumar-ravi-538101a4/" target="_blank">
+                <img src="https://img.icons8.com/?size=100&id=MR3dZdlA53te&format=png&color=000000" alt="LinkedIn Icon">
+                
+            </a>
+        </div>
           <p><strong>Email:</strong> roshanrajan1073@gmail.com</p>
           <p><strong>Phone:</strong> +91 7010252993</p>
           <p>2C1, Kamarajar Cross Street</p>
           <p>Shenbakkam,</p>
           <p>Vellore - 632008</p>
           <br>
+
+          <div class="profile-picture">
+              <img src="Profile.png" alt="Profile Picture">
+          </div>
 
             <h2>About Me</h2>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;As a Senior Executive in Management Information Systems (MIS), I excel in generating detailed reports, dynamic dashboards, and managing databases using Office 365 applications. I also have experience working with SAP HR in a production environment, where I can view details and generate reports concerning immigration requirements. My role demands strong data analysis, report generation, and problem-solving skills, enabling me to provide actionable insights and support decision-making processes. Committed to leveraging technology to drive efficiency, I am dedicated to enhancing business operations through innovative solutions.</p>
