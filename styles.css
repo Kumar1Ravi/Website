@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+.flex-container {
+    display: flex;
+    
+    justify-content: flex-start;
+    align-items: flex-start;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 0;
+}
+.profile-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: safe;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
+}
+.profile-info {
+    flex: 1;
+}
+.profile-picture img {
+    margin-top: 50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 80%;
+    object-fit: cover;
+}
+.About-Me,  {
+    background: #fff;
+    border-radius: 5px;
+    text-align: justify;
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.About-Me, p {
+    text-align: justify;
+}
+.Resume, h1 {
+    text-align: center;
+}
+.decleration p {
+    text-align: right;
+    margin: 20px;
+}
+.HCL-Summary p {
+
+}

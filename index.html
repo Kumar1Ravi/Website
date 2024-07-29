@@ -1,240 +1,119 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 70%;
-            margin: auto;
-            overflow: hidden;
-        }
-        .flex-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            background: #fff;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            margin-top: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            min-height: 0;
-        }
-        .address {
-            max-width: 300px;
-        }
-        .address h2, h3, h2, h3 {
-      
-            margin-top: 0;
-            color: #4f2ca1;
-        }
-        .address p {
-          
-            margin: 1% 0;
-        }
-        .address h2{
-          text-align: center;
-        }
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            margin-left: 20px; /* Add margin to the left of contact info */
-            padding-top: 60px;
-        }
-        .contact-info p {
-            margin: 1% 0;
-        }
-        .About-Me, .Work-experience {
-            background: #fff;
-            border-radius: 5px;
-            text-align: justify;
-            margin-top: 20px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .About-Me p, .Work-experience p {
-            margin: 1% 0;
-        }
-        .decleration {
-            text-align: right;
-            margin: 20px;
-        }
-        .Work-experience h1 {
-          text-align: center;
-          margin-top: 0;
-          color:#4f2ca1;
-        }
+    <title>My First website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 
-        .linkedin-icon {
-            display: flex;
-            align-items: center;
-            margin-top: 20px;
-        }
-        .linkedin-icon a {
-            text-decoration: none;
-            color: #0e76a8; /* LinkedIn's color */
-            font-size: 24px;
-            display: flex;
-            align-items: center;
-        }
-        .linkedin-icon img {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px; /* Space between the icon and the text */
-        }
-
-        .profile-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    background: #fff;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.profile-info {
-    flex: 1;
-}
-
-.profile-picture img {
-    width: 120px; /* Adjust size as needed */
-    height: 120px; /* Adjust size as needed */
-    border-radius: 50%; /* Make the picture circular */
-    object-fit: cover; /* Ensure the image covers the container */
-}
-
-
-    </style>
-    <script>
-        function getCurrentDate() {
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            return new Date().toLocaleDateString(undefined, options);
-        }
-
-        window.onload = function() {
-            document.getElementById('current-date').textContent = getCurrentDate();
-        }
-    </script>
 </head>
 <body>
     <div class="container">
-        <div class="Work-experience">
-          
-          <h1>Resume</h1>
-
-          <h2>Kumar Ravi</h2>
-          <div class="linkedin-icon">
-            <a href="https://www.linkedin.com/in/kumar-ravi-538101a4/" target="_blank">
-                <img src="https://img.icons8.com/?size=100&id=MR3dZdlA53te&format=png&color=000000" alt="LinkedIn Icon">
+        <div class="flex-container">
+            <div class="address">
+                <div class="Resume">
+                    <H1>Resume</H1>
+                </div>
+                <h2>Kumar Ravi</h2>
+                <p><strong>Email:</strong> roshanrajan1073@gmail.com<br>  
+                    <strong>Phone:</strong> +91 7010252993<br>
+                    2C1, Kamarajar Cross Street,<br>
+                    Shenbakkam,<br>
+                    Vellore - 632008</p>
                 
-            </a>
-        </div>
-          <p><strong>Email:</strong> roshanrajan1073@gmail.com</p>
-          <p><strong>Phone:</strong> +91 7010252993</p>
-          <p>2C1, Kamarajar Cross Street</p>
-          <p>Shenbakkam,</p>
-          <p>Vellore - 632008</p>
-          <br>
-
-          <div class="profile-picture">
-              <img src="Profile.png" alt="Profile Picture">
-          </div>
-
-            <h2>About Me</h2>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;As a Senior Executive in Management Information Systems (MIS), I excel in generating detailed reports, dynamic dashboards, and managing databases using Office 365 applications. I also have experience working with SAP HR in a production environment, where I can view details and generate reports concerning immigration requirements. My role demands strong data analysis, report generation, and problem-solving skills, enabling me to provide actionable insights and support decision-making processes. Committed to leveraging technology to drive efficiency, I am dedicated to enhancing business operations through innovative solutions.</p>
-        
-            <br>
-
-
-            <h2>Professional Experience: HCL Technologies</h2>
-            <p>Position: Senior Executive-Ent HR-I&C-I&C-Immigration</p>
-            <p>Department: Immigration Solution Group</p>
-            <p>Duration: [23-SEP-2024] – Present</p>
-            <ul>
-                <li>Implemented automation for case assignation, improving efficiency and accuracy.</li>
-                <li>Developed automated email generation systems to streamline communication.</li>
-                <li>Created a comprehensive GC database in MS Access for enhanced data management.</li>
-                <li>Utilized SAP GUI for seamless integration and workflow automation.</li>
-                <li>Automated wage calculations to ensure precise and timely payroll processing.</li>
-                <li>Conducted reporting and analysis to provide actionable insights for decision-making.</li>
-                <li>Spearheaded process automation initiatives to boost operational efficiency.</li>
-                <li>Managed data effectively to maintain accuracy and integrity.</li>
-                <li>Monitored performance metrics to drive continuous improvement.</li>
-                <li>Identified and implemented process improvements to enhance productivity.</li>
-                <li>Demonstrated technical proficiency in various tools and software for optimized workflow.</li>
-            </ul>
-            <h3>Reports Handled:</h3>
-            <ol>
-                <li>Generated comprehensive CXO Reports (M)</li>
-                <li>Calculated and analyzed Cost per Visa (M)</li>
-                <li>Prepared Yet to Utilization Reports (M)</li>
-                <li>Verified LWD Reports (M)</li>
-                <li>Extracted Active & Nationality lists from SAP (M)</li>
-                <li>Monitored SLA for all GEOs (WR)</li>
-                <li>Compiled In-house Visa Processing Reports (WR)</li>
-                <li>Created detailed Pipeline Reports (W)</li>
-                <li>Managed Resource Assignation System (RAS) (M)</li>
-                <li>Oversaw Travel Assignation System (TAS) (M)</li>
-                <li>Maintained Travel Management System (TMS) (M)</li>
-                <li>Ensured Visa Ready Travel Ready (VRTR) compliance (M)</li>
-                <li>Handled additional ad-hoc tasks as needed</li>
-            </ol>
-            <h2>Professional Experience: Cognizant Technology Solution</h2>
-            <p>Position: Senior Process Executive – Data</p>
-            <p>Department: Cigna</p>
-            <p>Duration: [13-JUL-2018] – [21-SEP-2022]</p>
-            <ul>
-                <li>Developed comprehensive monthly performance status reports to track and analyze key metrics.</li>
-                <li>Generated detailed production reports to monitor workflow and efficiency.</li>
-                <li>Created in-depth quality reports ensuring adherence to high standards.</li>
-                <li>Designed and implemented an interactive production dashboard for real-time monitoring.</li>
-                <li>Developed an output validation template to streamline quality assurance processes.</li>
-                <li>Built an attendance dashboard for effective tracking and management of team attendance.</li>
-                <li>Produced detailed hourly production reports to optimize productivity and resource allocation.</li>
-            </ul>
-            <h2>Education:</h2>
-            <p>Degree: Diploma - <strong>Graduated, July 2013</strong></p>
-            <p>Gedee Technical Training Institute</p>
-            <p>Coimbatore,</p>
-            <p>Tamil Nadu - 641081</p>
-            <hr>
-            <p>Degree: Master Diploma in Information Technology</p>
-            <p>Vellore - 632008</p>
-            <br>
-            <h2>Skills:</h2>
-            <ol>
-                <li>Excel Formulas</li>
-                <li>Excel VBA</li>
-                <li>MS Access</li>
-                <li>MS Forms</li>
-                <li>Power Automation</li>
-                <li>Power BI</li>
-                <li>RPA bot</li>
-                <li>HTML, CSS (Using VS Code learning)</li>
-                <li>Data Management</li>
-            </ol>
-            <h2>Declaration:</h2>
-            <p>I, <strong>Kumar Ravi</strong>, hereby declare that the information contained herein is true and correct to the best of my knowledge and belief.</p>
-            <br>
-            <br>
-            <div class="decleration">
-                <p>_________________</p>
-                <p>Kumar Ravi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-                <p>Date: <span id="current-date"></span></p>
+                <div class="About">
+                <h2>About Me</h2>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;As a Senior Executive in Management Information Systems (MIS), I excel in generating detailed reports, dynamic dashboards, and managing databases using Office 365 applications. I also have experience working with SAP HR in a production environment, where I can view details and generate reports concerning immigration requirements. My role demands strong data analysis, report generation, and problem-solving skills, enabling me to provide actionable insights and support decision-making processes. Committed to leveraging technology to drive efficiency, I am dedicated to enhancing business operations through innovative solutions.</p>
+           
+                </div>
+             
+                <h2>Professional Experience: HCL Technologies</h2>
+                <p>Position: Senior Executive-Ent HR-I&C-I&C-Immigration</p>
+                <p>Department: Immigration Solution Group</p>
+                <p>Duration: [23-SEP-2024] – Present</p>
+    
+                <ul>
+                    <li>Implemented automation for case assignation, improving efficiency and accuracy.</li>
+                    <li>Developed automated email generation systems to streamline communication.</li>
+                    <li>Created a comprehensive GC database in MS Access for enhanced data management.</li>
+                    <li>Utilized SAP GUI for seamless integration and workflow automation.</li>
+                    <li>Automated wage calculations to ensure precise and timely payroll processing.</li>
+                    <li>Conducted reporting and analysis to provide actionable insights for decision-making.</li>
+                    <li>Spearheaded process automation initiatives to boost operational efficiency.</li>
+                    <li>Managed data effectively to maintain accuracy and integrity.</li>
+                    <li>Monitored performance metrics to drive continuous improvement.</li>
+                    <li>Identified and implemented process improvements to enhance productivity.</li>
+                    <li>Demonstrated technical proficiency in various tools and software for optimized workflow.</li>
+                </ul>
+                <h3>Reports Handled:</h3>
+                <ol>
+                    <li>Generated comprehensive CXO Reports (M)</li>
+                    <li>Calculated and analyzed Cost per Visa (M)</li>
+                    <li>Prepared Yet to Utilization Reports (M)</li>
+                    <li>Verified LWD Reports (M)</li>
+                    <li>Extracted Active & Nationality lists from SAP (M)</li>
+                    <li>Monitored SLA for all GEOs (WR)</li>
+                    <li>Compiled In-house Visa Processing Reports (WR)</li>
+                    <li>Created detailed Pipeline Reports (W)</li>
+                    <li>Managed Resource Assignation System (RAS) (M)</li>
+                    <li>Oversaw Travel Assignation System (TAS) (M)</li>
+                    <li>Maintained Travel Management System (TMS) (M)</li>
+                    <li>Ensured Visa Ready Travel Ready (VRTR) compliance (M)</li>
+                    <li>Handled additional ad-hoc tasks as needed</li>
+                </ol>
+                <h2>Professional Experience: Cognizant Technology Solution</h2>
+                <p>Position: Senior Process Executive – Data</p>
+                <p>Department: Cigna</p>
+                <p>Duration: [13-JUL-2018] – [21-SEP-2022]</p>
+                <ul>
+                    <li>Developed comprehensive monthly performance status reports to track and analyze key metrics.</li>
+                    <li>Generated detailed production reports to monitor workflow and efficiency.</li>
+                    <li>Created in-depth quality reports ensuring adherence to high standards.</li>
+                    <li>Designed and implemented an interactive production dashboard for real-time monitoring.</li>
+                    <li>Developed an output validation template to streamline quality assurance processes.</li>
+                    <li>Built an attendance dashboard for effective tracking and management of team attendance.</li>
+                    <li>Produced detailed hourly production reports to optimize productivity and resource allocation.</li>
+                </ul>
+                <h2>Education:</h2>
+                <p>Degree: Diploma - <strong>Graduated, July 2013</strong></p>
+                <p>Gedee Technical Training Institute</p>
+                <p>Coimbatore,</p>
+                <p>Tamil Nadu - 641081</p>
+                <hr>
+                <p>Degree: Master Diploma in Information Technology</p>
+                <p>Vellore - 632008</p>
+                <br>
+                <h2>Skills:</h2>
+                <ol>
+                    <li>Excel Formulas</li>
+                    <li>Excel VBA</li>
+                    <li>MS Access</li>
+                    <li>MS Forms</li>
+                    <li>Power Automation</li>
+                    <li>Power BI</li>
+                    <li>RPA bot</li>
+                    <li>HTML, CSS (Using VS Code learning)</li>
+                    <li>Data Management</li>
+                </ol>
+                <h2>Declaration:</h2>
+                <p>I, <strong>Kumar Ravi</strong>, hereby declare that the information contained herein is true and correct to the best of my knowledge and belief.</p>
+                <br>
+                <br>
+                <div class="decleration">
+                    <p>_________________</p>
+                    <p><strong>Kumar Ravi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></strong>
+                    <p><strong>Date: <span id="current-date"></span></p></strong>
+                </div>
+               
             </div>
+            
+            <div class="profile-picture">
+                <img src="Profile Picture.JPG" alt="Profile Picture">
+            </div>        
         </div>
+
     </div>
 </body>
 </html>
