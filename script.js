@@ -15,3 +15,22 @@ function downloadCV() {
     link.click();
     document.body.removeChild(link);
 }
+
+window.onload = function() {
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+
+    modal.style.display = "flex"; // Ensure the modal is displayed as flex to use the flexbox centering
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    document.getElementById('current-date').textContent = getCurrentDate();
+}
