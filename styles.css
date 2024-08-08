@@ -140,12 +140,21 @@ body {
 
 .modal-content {
     background-color: #fff;
+    background-color: #246b6b;
     padding: 20px;
     border: 1px solid #888;
+    border-radius: 10px;
+    color: #4f2ca1
     width: 80%;
     max-width: 300px;
     text-align: center;
     position: relative;
+}
+
+
+.modal-content p {
+color:#fff ;
+
 }
 
 .close {
@@ -154,6 +163,7 @@ body {
     right: 10px;
     color: #aaa;
     font-size: 28px;
+    
     font-weight: bold;
     cursor: pointer;
 }
