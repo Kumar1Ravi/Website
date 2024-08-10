@@ -20,7 +20,13 @@ window.onload = function() {
     var modal = document.getElementById("myModal");
     var span = document.getElementsByClassName("close")[0];
 
-    modal.style.display = "flex"; // Ensure the modal is displayed as flex to use the flexbox centering
+    // Check if the popup has been shown before
+    if (!localStorage.getItem('popupShown')) {
+        modal.style.display = "flex"; // Show the popup
+
+        // Set the flag in localStorage to indicate the popup has been shown
+        localStorage.setItem('popupShown', 'true');
+    }
 
     span.onclick = function() {
         modal.style.display = "none";
@@ -34,3 +40,35 @@ window.onload = function() {
 
     document.getElementById('current-date').textContent = getCurrentDate();
 }
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+function showPasswordPrompt() {
+    document.getElementById('passwordPrompt').style.display = 'block';
+    document.getElementById('passwordInput').value = ''; // Clear the password field;
+    document.getElementById('errorMessage').style.display = 'none'; // Hide error message
+}
+
+function validatePassword() {
+    var password = document.getElementById('passwordInput').value;
+    var correctPassword = 'Roshanrajan@1992'; // Replace with your actual password
+    var errorMessage = document.getElementById('errorMessage');
+
+    if (password === correctPassword) {
+        window.location.href = 'Project.html'; // Redirect to project.html
+    } else {
+        errorMessage.textContent = 'You are not authorized to access this page.';
+        errorMessage.style.display = 'block'; // Show error message
+        // No need to call cancelPrompt here; the prompt remains visible
+    }
+}
+
+function cancelPrompt() {
+    document.getElementById('passwordPrompt').style.display = 'none'; // Hide prompt
+    document.querySelector('.overlay').style.display = 'none'; // Hide overlay
+    document.getElementById('passwordInput').value = ''; // Clear the password field
+    document.getElementById('errorMessage').style.display = 'none'; // Hide error message
+    document.getElementById('errorMessage').value = ''; // Clear the password field
+}
+//////////////////////////////////////////////////////////////////////////////

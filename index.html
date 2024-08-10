@@ -7,6 +7,7 @@
     <title>Resume</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
+    
 
 </head>
 <body>
@@ -18,11 +19,23 @@
                 </div>
                 <h2>Kumar Ravi
                 
-                    <a href="https://www.linkedin.com/in/kumar-ravi-538101a4/" target="_blank">
-                        <img src="https://img.icons8.com/?size=100&id=MR3dZdlA53te&format=png&color=000000" alt="LinkedIn Icon" width="20" height="20">
+                    <a href="https://www.linkedin.com/in/kumar-ravi-538101a4/" target="_blank" class="icon-link">
+                        <img src="https://img.icons8.com/?size=100&id=MR3dZdlA53te&format=png&color=000000" alt="LinkedIn Icon" width="20" height="20" class="icon-img">
+
+                    </a> <a href="Project.html" class="icon-link" onclick="showPasswordPrompt(); return false;">
+                        <img src="https://img.icons8.com/?size=100&id=f3o1AGoVZ2Un&format=png&color=000000" alt="Project Icon" width="20" height="20" class="icon-img">
                     </a>
-                    
-                    
+
+                   
+                        <!-- Password Prompt -->
+                        <div id="passwordPrompt">
+                        <label for="passwordInput">Enter Password:</label>
+                        <input type="password" id="passwordInput">
+                        <button onclick="validatePassword()">Submit</button>
+                        <button onclick="cancelPrompt()">Cancel</button>
+                        <div id="errorMessage"></div> <!-- Error message container -->
+                    </div>
+                
                 </h2>
                 <p><strong>Email:</strong> roshanrajan1073@gmail.com<br>  
                     <strong>Phone:</strong> +91 7010252993<br>
@@ -133,6 +146,10 @@
             </div>
         </div>
     </div>
+
+
+
+
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
