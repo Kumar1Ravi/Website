@@ -60,7 +60,7 @@ function validatePassword() {
     } else {
         errorMessage.textContent = 'You are not authorized to access this page.';
         errorMessage.style.display = 'block'; // Show error message
-        // No need to call cancelPrompt here; the prompt remains visible
+       
     }
 }
 
@@ -72,3 +72,25 @@ function cancelPrompt() {
     document.getElementById('errorMessage').value = ''; // Clear the password field
 }
 //////////////////////////////////////////////////////////////////////////////
+
+// scripts.js
+
+document.getElementById('uploadForm').addEventListener('submit', async (event) => {
+    event.preventDefault();
+    
+    const formData = new FormData();
+    formData.append('document', document.getElementById('document').files[0]);
+
+    try {
+        const response = await fetch('https://1drv.ms/f/s!Aoh3blD1YoyQgh-tzlWTgjCumT-e?e=2tUY6d', {
+            method: 'POST',
+            body: formData,
+        });
+
+        const result = await response.json();
+        document.getElementById('status').textContent = result.message;
+    } catch (error) {
+        document.getElementById('status').textContent = 'Error uploading file.';
+    }
+});
+

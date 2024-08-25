@@ -10,9 +10,9 @@ body {
     margin: auto;
     overflow: hidden;
 }
+
 .flex-container {
     display: flex;
-    
     justify-content: flex-start;
     align-items: flex-start;
     background: #fff;
@@ -24,10 +24,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     min-height: 0;
 }
+
 .profile-container {
     display: flex;
     align-items: flex-start;
-    justify-content: safe;
+    justify-content: flex-start; /* Updated */
     padding: 20px;
     background: #fff;
     border: 1px solid #ddd;
@@ -35,21 +36,25 @@ body {
     margin-top: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);    
 }
+
 .profile-info {
     flex: 1;
 }
+
 .profile-picture img {
     margin-top: 50px;
     width: 175px;
     height: 175px;
-    border-radius: 80%;
+    border-radius: 80%; /* Changed to 50% for a circular image */
     object-fit: cover;
     transition: transform 0.3s ease-in-out; /* Added transition property */
 }
+
 .profile-picture img:hover {
     transform: scale(1.2); /* Zoom effect on hover */
 }
-.About-Me,  {
+
+.About-Me {
     background: #fff;
     border-radius: 5px;
     text-align: justify;
@@ -57,22 +62,27 @@ body {
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .About-Me, p {
     text-align: justify;
 }
+
 .Resume, h1 {
     text-align: center;
     margin-top: 0;
     color: #4f2ca1;
 }
+
 .Resume, h2, h3 {
     margin-top: 0;
     color: #4f2ca1;
 }
+
 .decleration p {
     text-align: right;
     margin: 20px;
 }
+
 .linkedin-icon {
     margin: 0;
 }
@@ -83,12 +93,12 @@ body {
     background-image: radial-gradient(100% 100% at 100% 0, #5adaff 0, #5468ff 100%);
     border: 0;
     border-radius: 6px;
-    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
     box-sizing: border-box;
     color: #fff;
     cursor: pointer;
     display: inline-flex;
-    font-family: "JetBrains Mono",monospace;
+    font-family: "JetBrains Mono", monospace;
     height: 48px;
     justify-content: center;
     line-height: 1;
@@ -99,28 +109,28 @@ body {
     position: relative;
     text-align: left;
     text-decoration: none;
-    transition: box-shadow .15s,transform .15s;
+    transition: box-shadow .15s, transform .15s;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
     white-space: nowrap;
-    will-change: box-shadow,transform;
+    will-change: box-shadow, transform;
     font-size: 18px;
-  }
-  
-  .button-29:focus {
+}
+
+.button-29:focus {
     box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
-  }
-  
-  .button-29:hover {
+}
+
+.button-29:hover {
     box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
     transform: translateY(-2px);
-  }
-  
-  .button-29:active {
+}
+
+.button-29:active {
     box-shadow: #3c4fe0 0 3px 7px inset;
     transform: translateY(2px);
-  }
+}
 
 /* Modal styles */
 .modal {
@@ -139,22 +149,19 @@ body {
 }
 
 .modal-content {
-    background-color: #fff;
-    background-color: #246b6b;
+    background-color: #4f2ca1;
     padding: 20px;
     border: 1px solid #888;
     border-radius: 10px;
-    color: #4f2ca1
-    width: 80%;
+    color: #faf9fc; /* Added missing semicolon */
+    width: 100%; /* Ensuring width is properly defined */
     max-width: 300px;
     text-align: center;
     position: relative;
 }
 
-
 .modal-content p {
-color:#fff ;
-
+    color: #fff;
 }
 
 .close {
@@ -163,7 +170,6 @@ color:#fff ;
     right: 10px;
     color: #aaa;
     font-size: 28px;
-    
     font-weight: bold;
     cursor: pointer;
 }
@@ -176,99 +182,86 @@ color:#fff ;
 }
 
 .icon-link {
-display: inline-block;
-text-decoration: none;
-
+    display: inline-block;
+    text-decoration: none;
 }
+
 .icon.img {
-vertical-align: middle;
-display: inline-block;
-margin: 0%;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0%;
 }
 
+/* Style for the password prompt */
+#passwordPrompt {
+    display: none; /* Initially hidden */
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 10px solid #53487a; /* Border color */
+    border-radius: 10px;
+    background-color: #53487a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Ensure it appears above other content */
+    max-width: 400px;
+    width: 100%;
+}
 
-        /* Style for the password prompt */
-        #passwordPrompt {
-            display: none; /* Initially hidden */
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            padding: 20px;
-            border: 2px solid #007bff; /* Border color */
-            border-radius: 8px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000; /* Ensure it appears above other content */
-            max-width: 400px;
-            width: 100%;
-            background-color: #fff;
-            background-color: #246b6b;
-            padding: 20px;
-            border: 1px solid #888;
-            border-radius: 10px;
-            color: #4f2ca1
-            width: 80%;
-            max-width: 300px;
+.overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Ensure it appears behind the prompt */
+}
 
+/* Style for prompt elements */
+#passwordPrompt label {
+    color: #fff;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
 
-        }
-        
-        /* Overlay Background */
-        .overlay {
-            display: none; /* Initially hidden */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999; /* Ensure it appears behind the prompt */
-            
-        }
+#passwordPrompt input[type="password"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
 
-        /* Style for prompt elements */
-        #passwordPrompt label {
-            color: #fff;
-            display: block;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
+#passwordPrompt button {
+    background-color: #3c4fe0; /* Button background color */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
 
-        #passwordPrompt input[type="password"] {
-            width: calc(100% - 20px);
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            margin-bottom: 10px;
-        }
+#passwordPrompt button:hover {
+    background-color: #051e3a; /* Button hover color */
+}
 
-        #passwordPrompt button {
-            background-color: #3c4fe0; /* Button background color */
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            margin-right: 10px;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
-        }
+#passwordPrompt .cancel-button {
+    background-color: #6c757d; /* Cancel button background color */
+}
 
-        #passwordPrompt button:hover {
-            background-color: #051e3a; /* Button hover color */
-        }
+#passwordPrompt .cancel-button:hover {
+    background-color: #5a6268; /* Cancel button hover color */
+}
 
-        #passwordPrompt .cancel-button {
-            background-color: #6c757d; /* Cancel button background color */
-        }
-
-        #passwordPrompt .cancel-button:hover {
-            background-color: #5a6268; /* Cancel button hover color */
-        }
-
-        /* Error message style */
-        #errorMessage {
-            display: none; /* Initially hidden */
-            color: rgb(243, 243, 243);
-            margin-top: 10px;
-        }
+/* Error message style */
+#errorMessage {
+    display: none; /* Initially hidden */
+    color: rgb(243, 243, 243);
+    margin-top: 10px;
+}
